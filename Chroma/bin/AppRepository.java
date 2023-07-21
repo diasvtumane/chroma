@@ -42,7 +42,7 @@ public class AppRepository {
 
     public List<App> getLeaderboard() {
         List<App> leaderboard = apps;
-        Collections.sort(leaderboard, Comparator.comparingInt(App::getDownloads).reversed());
+        leaderboard.sort(Comparator.comparingInt(App::getLikes).reversed());
         return leaderboard;
     }
 }

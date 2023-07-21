@@ -7,7 +7,7 @@ public class App {
     private String appSize;
     private double rating;
     private int likes;
-    private int downloads;
+   
 
     // Constructor
     public App(String name, String description, String developer, String version, String platform, String appSize) {
@@ -19,7 +19,11 @@ public class App {
         this.appSize = appSize;
         this.rating = 0.0;
         this.likes = 0;
-        this.downloads = 0;
+    }
+
+    public void updateFeedback(double rating, int likes) {
+        this.rating = rating;
+        this.likes = likes;
     }
 
     // Getters and setters
@@ -55,9 +59,5 @@ public class App {
         return likes;
     }
 
-    public int getDownloads() {
-        return downloads;
-    }
-
-    // Setters can be added if needed, but they are not included in this example
+    
 }

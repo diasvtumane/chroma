@@ -100,7 +100,6 @@ public class ChromaAppGUI extends JFrame {
         details.append("App Size: ").append(app.getAppSize()).append("\n");
         details.append("Rating: ").append(app.getRating()).append("\n");
         details.append("Likes: ").append(app.getLikes()).append("\n");
-        details.append("Downloads: ").append(app.getDownloads()).append("\n");
 
         appDetailsTextArea.setText(details.toString());
     }
