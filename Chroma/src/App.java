@@ -1,63 +1,92 @@
-public class App {
-    private String name;
-    private String description;
-    private String developer;
-    private String version;
-    private String platform;
-    private String appSize;
-    private double rating;
-    private int likes;
-   
+import java.util.List;
 
-    // Constructor
-    public App(String name, String description, String developer, String version, String platform, String appSize) {
+/**
+ * App is a class that represents an application.
+ */
+public class App {
+    // Name of the application.
+    private String name;
+    
+    // Description of the application.
+    private String description;
+    
+    // List of versions of the application.
+    private List<String> versions;
+    
+    // Platform of the application (like Android, iOS, etc).
+    private String platform;
+
+    /**
+     * Constructor
+     * @param name: name of the application.
+     * @param description: description of the application.
+     * @param versions: list of versions of the application.
+     * @param platform: platform of the application.
+     */
+    public App(String name, String description, List<String> versions, String platform) {
         this.name = name;
         this.description = description;
-        this.developer = developer;
-        this.version = version;
+        this.versions = versions;
         this.platform = platform;
-        this.appSize = appSize;
-        this.rating = 0.0;
-        this.likes = 0;
     }
 
-    public void updateFeedback(double rating, int likes) {
-        this.rating = rating;
-        this.likes = likes;
-    }
-
-    // Getters and setters
+    /**
+     * To get the name of the application.
+     * @return The name of the application.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * To set the name of the application.
+     * @param newName The new name of the application.
+     */
+    public void setName(String newName) {
+        this.name = newName;
+    }
+    
+    /**
+     * To Get the description of the application.
+     * @return The description of the application.
+     */
     public String getDescription() {
         return description;
     }
 
-    public String getDeveloper() {
-        return developer;
+    /**
+     * To Set the description of the application.
+     * @param newDescription The new description of the application.
+     */
+    public void setDescription(String newDescription) {
+        this.description = newDescription;
+    }
+    
+    /**
+     * To get list of versions of the application.
+     * @return The list of versions of the application.
+     */
+    public List<String> getVersions() {
+        return versions;
     }
 
-    public String getVersion() {
-        return version;
-    }
-
+    /**
+     * To get platform of the application.
+     * @return The platform of the application.
+     */
     public String getPlatform() {
         return platform;
     }
 
-    public String getAppSize() {
-        return appSize;
+    /**
+     * To get string representation of the application.
+     * @return A string representation of the application.
+     */
+    @Override
+    public String toString() {
+        return "App Name: " + name + 
+               "\nDescription: " + description + 
+               "\nVersions: " + versions +
+               "\nPlatform: " + platform;
     }
-
-    public double getRating() {
-        return rating;
-    }
-
-    public int getLikes() {
-        return likes;
-    }
-
-    
 }
