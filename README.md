@@ -9,7 +9,7 @@ You can download the latest version of JRE from the official Oracle website or u
 
 2) Run the Java application:
 
-Once JRE is installed, you can double-click the AppStoreGUI.jar file on the computer to run the Java application.
+Once JRE is installed, you can double-click the ChromaAppStore.jar file on the computer to run the Java application.
 The application window should open, and you can interact with the app.
 
 
